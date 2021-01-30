@@ -42,7 +42,6 @@ def register(request):
 			user.save()
 			return redirect('/login?success=Successfully registered!')
 		except Exception as e:
-			print(e)
 			return render(request, 'register.html', {"success":"Failure to register! Email already in database."})
 	else:
 		return render(request, 'register.html')
