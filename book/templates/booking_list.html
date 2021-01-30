@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %} All bookings {% endblock %}
+<body>
+	{% block content %}
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+        
+                    <div class="booking-form">
+                        <h3 style="color: white;">Bookings:</h3>
+
+                        {% for booking in bookings %}
+                        <div>
+                            <p style="color: white;">{{ booking }}</p> <a href="/booking/delete/{{ booking.id }}"><button type="button" class="btn btn-danger" >Delete</button> </a>
+                        </div> 
+						{% endfor %}
+						<hr>
+						<div class="booking-row"> 
+							<a href="/booking"><button type="button" class="btn btn-danger">Book</button></a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endblock %}
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

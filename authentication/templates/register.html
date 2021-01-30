@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %} Register page {% endblock %}
+
+
+</head>
+
+<body>
+{% block content %}
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4">
+						<div class="booking-form">
+							<form action="" method="post">
+								<p style="color:red;">{{ success }}</p>
+								{% csrf_token %}
+
+								
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<span class="form-label">Email</span>
+											<input class="form-control" type="text" placeholder="Enter email..."
+												name="email" required>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<span class="form-label">Password</span>
+											<input class="form-control" type="password" placeholder="Enter password..."
+												name="password" required>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<span class="form-label">First Name</span>
+											<input class="form-control" type="text" placeholder="Enter first name..."
+												name="first_name" required>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<span class="form-label">Last Name</span>
+											<input class="form-control" type="text" placeholder="Enter last name..."
+												name="last_name" required>
+										</div>
+									</div>
+									
+								</div>
+
+								<div class="row">
+									<div class="col-md-3"></div>
+
+									<div class="col-md-6">
+										<div class="form-btn">
+											<button class="submit-btn">Register</button>
+										</div>
+									</div>
+									<div class="col-md-3"></div>
+
+
+								</div>
+								
+							</form>
+							<div class="row">
+								<div class="col-md-3"></div>
+
+								<div class="col-md-6">
+									<div class="form-btn">
+										<a href="/login"><button class="submit-btn">Login</button></a>
+									</div>
+								</div>
+								<div class="col-md-6"></div>
+
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4"></div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+{% endblock %}
+</body>
+
+</html>
